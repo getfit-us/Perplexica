@@ -9,7 +9,7 @@ WORKDIR /home/perplexica
 
 COPY ui /home/perplexica/
 
-RUN npm install
-RUN npm run build
+RUN yarn install
+RUN yarn build
 
-CMD ["npm", "run", "start"]
+CMD ["yarn", "start"]
