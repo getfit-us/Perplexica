@@ -1,4 +1,4 @@
-FROM node:slim
+FROM alpine:3.19
 
 ARG SEARXNG_API_URL
 ENV SEARXNG_API_URL=${SEARXNG_API_URL}
@@ -12,8 +12,7 @@ COPY drizzle.config.ts /home/perplexica/
 COPY package.json /home/perplexica/
 
 RUN mkdir /home/perplexica/data
-RUN npm install -g npm@latest
-RUN npm cache clean --force
+
 RUN npm install
 RUN npm run build
 
