@@ -16,4 +16,4 @@ RUN mkdir /home/perplexica/data
 RUN npm install 
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
