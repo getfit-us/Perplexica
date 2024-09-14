@@ -5,16 +5,16 @@ perplexica-backend:
     args:
       - SEARXNG_API_URL=http://host.docker.internal:8080
 
-  ports:
-    - 3001:3001
-  volumes:
-    - backend-dbstore:/home/perplexica/data
-    - ./config.toml:/home/perplexica/config.toml
-  extra_hosts:
-    - 'host.docker.internal:host-gateway'
-  networks:
-    - perplexica-network
-  restart: unless-stopped
+    ports:
+      - 3001:3001
+    volumes:
+      - backend-dbstore:/home/perplexica/data
+      - ./config.toml:/home/perplexica/config.toml
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    networks:
+      - perplexica-network
+    restart: unless-stopped
 
 perplexica-frontend:
   build:
