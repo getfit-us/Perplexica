@@ -13,6 +13,7 @@ COPY package.json /home/perplexica/
 
 RUN mkdir /home/perplexica/data
 RUN npm install -g npm@latest
+RUN npm cache clean --force
 RUN npm install
 RUN npm run build
 
