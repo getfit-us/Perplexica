@@ -13,7 +13,7 @@ COPY package.json /home/perplexica/
 
 RUN mkdir /home/perplexica/data
 
-RUN npm install 
-RUN npm run build
+RUN yarn install 
+RUN yarn build
 
-CMD ["npm", "run", "start"]
+CMD ["yarn", "start"]
