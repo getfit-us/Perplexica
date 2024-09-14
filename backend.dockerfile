@@ -10,11 +10,10 @@ COPY tsconfig.json /home/perplexica/
 COPY config.toml /home/perplexica/
 COPY drizzle.config.ts /home/perplexica/
 COPY package.json /home/perplexica/
-COPY yarn.lock /home/perplexica/
 
 RUN mkdir /home/perplexica/data
 
-RUN yarn install 
-RUN yarn build
+RUN npm install
+RUN npm run build
 
-CMD ["yarn", "start"]
+CMD ["npm", "run", "start"]
