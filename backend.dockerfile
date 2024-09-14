@@ -14,6 +14,6 @@ COPY package.json /home/perplexica/
 RUN mkdir /home/perplexica/data
 
 RUN yarn install 
-RUN yarn build
+# RUN yarn build
 
 CMD ["yarn", "start"]
