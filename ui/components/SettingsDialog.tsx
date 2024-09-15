@@ -16,7 +16,7 @@ const Input = ({ className, ...restProps }: InputProps) => {
     <input
       {...restProps}
       className={cn(
-        'bg-light-secondary dark:bg-dark-secondary px-3 py-2 flex items-center overflow-hidden border border-light-200 dark:border-dark-200 dark:text-white rounded-lg text-sm',
+        'bg-light-secondary dark:bg-dark-secondary px-3 py-2 flex items-center overflow-hidden border border-light-200 dark:border-dark-200 dark:text-white rounded-lg text-md sm:text-sm',
         className,
       )}
     />
