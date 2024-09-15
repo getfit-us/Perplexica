@@ -66,12 +66,10 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               </Link>
             ))}
           </VerticalIconContainer>
-
           <Settings
             onClick={() => setIsSettingsOpen(!isSettingsOpen)}
             className="cursor-pointer"
           />
-
           <SettingsDialog
             isOpen={isSettingsOpen}
             setIsOpen={setIsSettingsOpen}
@@ -98,8 +96,22 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <p className="text-xs">{link.label}</p>
           </Link>
         ))}
+        <div
+          className={`
+            ${
+              isSettingsOpen
+                ? 'text-black dark:text-white'
+                : 'text-black dark:text-white/70'
+            }
+           h-10 text-sm space-y-1 w-full flex flex-col items-center`}
+        >
+          <Settings
+            onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+            className="cursor-pointer w-full"
+          />
+          <div className="text-xs">Settings</div>
+        </div>
       </div>
-
       <Layout>{children}</Layout>
     </div>
   );
